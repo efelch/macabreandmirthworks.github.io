@@ -197,3 +197,48 @@ img { max-width: 100%; height: auto; display: block; }
 @media (prefers-reduced-motion: reduce) {
     * { animation: none !important; transition: none !important; }
 }
+
+
+/* Mobile nav (hamburger) */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: .45rem .55rem;
+  color: var(--text);
+  cursor: pointer;
+}
+.nav-toggle .bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  margin: 4px 0;
+  transition: transform .2s ease, opacity .2s ease;
+}
+@media (max-width: 800px) {
+  .nav-toggle { display: inline-flex; align-items: center; justify-content: center; }
+  .header-inner { position: relative; }
+  .nav ul {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: .6rem;
+    display: none;
+    flex-direction: column;
+    gap: .4rem;
+    width: min(92vw, 280px);
+    box-shadow: 0 10px 30px var(--shadow);
+    z-index: 30;
+  }
+  body.nav-open .nav ul { display: flex; }
+  .nav ul li { list-style: none; }
+  .nav ul a { padding: .55rem .6rem; display: block; }
+  .nav ul .btn { width: 100%; text-align: center; }
+  /* Prevent overflow of inline menu on mobile */
+  .nav { margin-left: auto; }
+}

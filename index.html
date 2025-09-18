@@ -72,8 +72,13 @@
         <a aria-label="Macabre and Mirthworks home" class="logo" href="#home">
             <span class="logo-text">Macabre and Mirthworks</span>
         </a>
+        <button class="nav-toggle" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
+            <span class="bar" aria-hidden="true"></span>
+            <span class="bar" aria-hidden="true"></span>
+            <span class="bar" aria-hidden="true"></span>
+        </button>
         <nav aria-label="Primary" class="nav">
-            <ul>
+            <ul id="primary-nav">
                 <li><a href="#products">Products</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#events">Craft Fairs</a></li>
@@ -342,6 +347,35 @@
 <script>
     // Update year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navList = document.getElementById('primary-nav');
+    if (navToggle && navList) {
+        const closeMenu = () => {
+            document.body.classList.remove('nav-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+            navToggle.setAttribute('aria-label', 'Open menu');
+        };
+        navToggle.addEventListener('click', () => {
+            const open = navToggle.getAttribute('aria-expanded') === 'true';
+            if (open) {
+                closeMenu();
+            } else {
+                document.body.classList.add('nav-open');
+                navToggle.setAttribute('aria-expanded', 'true');
+                navToggle.setAttribute('aria-label', 'Close menu');
+            }
+        });
+        // Close when a nav link is clicked
+        navList.addEventListener('click', (e) => {
+            if (e.target.closest('a')) closeMenu();
+        });
+        // Close on Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeMenu();
+        });
+    }
 </script>
 </body>
 </html>
