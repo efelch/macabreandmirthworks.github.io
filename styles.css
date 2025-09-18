@@ -68,6 +68,11 @@ img { max-width: 100%; height: auto; display: block; }
 .btn.ghost { background: transparent; }
 .btn.etsy { border-color: #eb6d20; color: #ffd8c5; }
 .btn.etsy:hover { background: rgba(235,109,32,.12); }
+/* Brand-colored social buttons */
+.btn.instagram { border-color: #E1306C; color: #ffd1e1; }
+.btn.instagram:hover { background: rgba(225,48,108,.12); }
+.btn.facebook { border-color: #1877F2; color: #d7e7ff; }
+.btn.facebook:hover { background: rgba(24,119,242,.12); }
 
 /* Hero */
 .hero { padding: 5rem 0 3rem; }
@@ -112,6 +117,18 @@ img { max-width: 100%; height: auto; display: block; }
 .faq-list summary { cursor: pointer; font-weight: 700; }
 .faq-list p { margin: .6rem 0 0; color: var(--muted); }
 
+/* Events */
+.events-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .8rem; }
+.event { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: .9rem 1rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.event-main { min-width: 220px; }
+.event-title { margin: 0; font-weight: 700; font-family: 'Sackers Gothic Std', Cinzel, serif; }
+.event-venue { margin: .2rem 0 0; color: var(--muted); }
+.event-meta { display: flex; align-items: center; gap: .8rem; }
+.event-date { font-weight: 700; color: var(--brand); }
+.event-time { color: var(--muted); }
+.event-link { background: rgba(201, 163, 106, 0.5); color: var(--text); text-decoration: none; border: 1px solid var(--border); padding: .35rem .6rem; border-radius: 999px; }
+.event-link:hover { background: rgba(201, 163, 106, 0.6); }
+
 /* Footer */
 .site-footer { border-top: 1px solid var(--border); padding: 2rem 0; background: #0c0c0e; }
 .footer-inner { display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center; }
@@ -119,7 +136,7 @@ img { max-width: 100%; height: auto; display: block; }
 .social-links { list-style: none; margin: 0; padding: 0; display: flex; gap: 1rem; }
 .social-links a { color: var(--muted); text-decoration: none; }
 .social-links a:hover { color: var(--text); }
-copyright { color: var(--muted); }
+.copyright { color: var(--muted); }
 
 /* Responsive */
 @media (max-width: 900px) {
