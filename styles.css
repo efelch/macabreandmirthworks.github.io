@@ -199,7 +199,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 
-/* Mobile nav (hamburger) */
+/* Mobile nav (toggle as plus sign) */
 .nav-toggle {
   display: none;
   background: transparent;
@@ -218,7 +218,36 @@ img { max-width: 100%; height: auto; display: block; }
   transition: transform .2s ease, opacity .2s ease;
 }
 @media (max-width: 800px) {
-  .nav-toggle { display: inline-flex; align-items: center; justify-content: center; }
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 28px;
+    height: 28px;
+    border: 0; /* cleaner icon look on mobile */
+    padding: 0;
+  }
+  .nav-toggle .bar {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 22px;
+    height: 2px;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    background: var(--text);
+    border-radius: 2px;
+  }
+  .nav-toggle .bar.vert { transform: translate(-50%, -50%) rotate(90deg); }
+  /* When menu is open, turn + into - by hiding vertical bar */
+  body.nav-open .nav-toggle .bar.vert { opacity: 0; }
+  .nav-toggle:focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+
   .header-inner { position: relative; }
   .nav ul {
     position: absolute;
