@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://macabreandmirthworks.com/sitemap.xml

@@ -1,0 +1,182 @@
+
+/* Macabre & Mirthworks — Site Styles */
+:root {
+    --bg: #0e0e10;
+    --panel: #141418;
+    --text: #e9e9ef;
+    --muted: #b9bac6;
+    --brand: #c9a36a; /* warm brass/gold */
+    --accent: #9a4d50; /* mulled wine */
+    --border: #26262c;
+    --shadow: rgba(0,0,0,0.3);
+}
+
+/* Local font: Sackers Gothic Std Medium */
+@font-face {
+    font-family: 'Sackers Gothic Std';
+    src: url('fonts/sackersgothicstd-medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+    margin: 0;
+    background: radial-gradient(1200px 800px at 80% -10%, #17171c 0%, var(--bg) 60%);
+    color: var(--text);
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+.container { width: min(1100px, 92%); margin: 0 auto; }
+
+.skip-link {
+    position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+}
+.skip-link:focus { position: static; width: auto; height: auto; padding: .5rem .75rem; background: var(--brand); color: #222; }
+
+/* Header */
+.site-header {
+    position: sticky; top: 0; z-index: 20;
+    background: rgba(14,14,16,0.7);
+    backdrop-filter: saturate(140%) blur(6px);
+    border-bottom: 1px solid var(--border);
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .8rem 0; }
+.logo {
+    display: flex; align-items: center; gap: .6rem; color: var(--text); text-decoration: none;
+}
+.logo-mark { color: var(--brand); font-size: 1.1rem; }
+.logo-text { font-family: 'Sackers Gothic Std', Cinzel, serif; font-weight: 600; letter-spacing: .5px; font-size: 2rem; }
+
+.nav ul { list-style: none; display: flex; gap: 1.2rem; margin: 0; padding: 0; align-items: center; }
+.nav a { color: var(--text); text-decoration: none; opacity: .9; }
+.nav a:hover { opacity: 1; }
+
+/* Buttons */
+.btn { display: inline-block; padding: .7rem 1rem; border-radius: 10px; border: 1px solid var(--border); text-decoration: none; color: var(--text); transition: transform .06s ease, background .2s ease, border-color .2s ease; }
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+.btn.primary { background: linear-gradient(180deg, #c9a36a, #b78d52 60%); color: #23190d; border-color: #b88f55; font-weight: 700; }
+.btn.ghost { background: transparent; }
+.btn.etsy { border-color: #eb6d20; color: #ffd8c5; }
+.btn.etsy:hover { background: rgba(235,109,32,.12); }
+
+/* Hero */
+.hero { padding: 5rem 0 3rem; }
+.hero-inner { display: grid; grid-template-columns: 1.1fr .9fr; gap: 2rem; align-items: center; }
+.hero h1 { font-family: 'Sackers Gothic Std', Cinzel, serif; font-weight: 700; line-height: 1.15; font-size: clamp(1.85rem, 2.2vw + 1rem, 2.7rem); margin: 0 0 .6rem; }
+.hero p { color: var(--muted); margin: 0 0 1.2rem; }
+.cta-row { display: flex; gap: .8rem; flex-wrap: wrap; }
+.hero-media img { border-radius: 16px; box-shadow: 0 10px 30px var(--shadow); border: 1px solid var(--border); }
+
+/* Sections */
+.section { padding: 3.5rem 0; content-visibility: auto; contain-intrinsic-size: 800px; }
+.section.alt { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0) 30%); }
+.section-header { text-align: center; margin-bottom: 1.8rem; }
+.section-header.left { text-align: left; }
+.section h2 { font-family: 'Sackers Gothic Std', Cinzel, serif; font-weight: 700; margin: 0 0 .4rem; }
+.section-header p { margin: 0; color: var(--muted); }
+
+/* Grid */
+.grid.products { display: grid; grid-template-columns: repeat( auto-fit, minmax(220px, 1fr) ); gap: 1.2rem; }
+
+/* Cards */
+.card { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; box-shadow: 0 6px 20px var(--shadow); display: flex; flex-direction: column; }
+.card-media-link { display: block; }
+.card img { aspect-ratio: 4 / 3; object-fit: cover; width: 100%; }
+.card-body { padding: .9rem .95rem 1rem; }
+.card-title { margin: 0 0 .25rem; font-weight: 700; font-family: 'Sackers Gothic Std', Cinzel, serif; }
+.card-text { margin: 0; color: var(--muted); }
+
+.section-cta { text-align: center; margin-top: 1.2rem; }
+
+/* About */
+.about-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 2rem; align-items: center; }
+.about-media img { border-radius: 16px; box-shadow: 0 10px 30px var(--shadow); border: 1px solid var(--border); }
+.about-copy p { color: var(--muted); }
+.social-row { display: flex; gap: .8rem; flex-wrap: wrap; margin-top: .6rem; }
+.social { color: var(--text); text-decoration: none; border: 1px solid var(--border); padding: .45rem .7rem; border-radius: 999px; }
+.social:hover { background: rgba(255,255,255,.04); }
+
+/* FAQ */
+.faq-list { display: grid; gap: .6rem; }
+.faq-list details { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: .7rem .9rem; }
+.faq-list summary { cursor: pointer; font-weight: 700; }
+.faq-list p { margin: .6rem 0 0; color: var(--muted); }
+
+/* Footer */
+.site-footer { border-top: 1px solid var(--border); padding: 2rem 0; background: #0c0c0e; }
+.footer-inner { display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center; }
+.brand { display: flex; align-items: center; gap: .5rem; }
+.social-links { list-style: none; margin: 0; padding: 0; display: flex; gap: 1rem; }
+.social-links a { color: var(--muted); text-decoration: none; }
+.social-links a:hover { color: var(--text); }
+copyright { color: var(--muted); }
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .about-grid { grid-template-columns: 1fr; }
+}
+
+
+/* Hero logo override */
+.hero-media .hero-logo {
+    display: block;
+    width: min(520px, 100%);
+    height: auto;
+    margin: 0 auto;
+    /* Make black artwork appear bright on dark background */
+    filter: invert(1) brightness(1.15) contrast(1.1);
+    /* Remove photo-style chrome that applies to generic .hero-media img */
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+@media (max-width: 600px) {
+    .hero-media .hero-logo { width: min(400px, 90%); }
+}
+
+/* Contact form */
+.contact-form {
+    width: min(760px, 100%);
+    margin: 0 auto;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1rem;
+    box-shadow: 0 6px 20px var(--shadow);
+}
+.contact-form .form-row { margin-bottom: .9rem; }
+.contact-form label { display: block; font-weight: 600; margin-bottom: .3rem; }
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    background: #0f0f12;
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: .7rem .8rem;
+    font: inherit;
+}
+.contact-form textarea { resize: vertical; }
+.contact-form .hp-field { position: absolute; left: -10000px; height: 0; width: 0; opacity: 0; }
+.contact-form .form-note { color: var(--muted); font-size: .9rem; margin-top: .6rem; }
+
+/* Match contact button text size with Etsy CTA */
+.contact-form .btn { font-size: 1.05rem; }
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+}
