@@ -22,6 +22,7 @@
 
 * { box-sizing: border-box; }
 html, body { height: 100%; }
+html { scrollbar-gutter: stable; }
 body {
     margin: 0;
     background: radial-gradient(1200px 800px at 80% -10%, #17171c 0%, var(--bg) 60%);
@@ -271,3 +272,31 @@ img { max-width: 100%; height: auto; display: block; }
   /* Prevent overflow of inline menu on mobile */
   .nav { margin-left: auto; }
 }
+
+
+/* Gallery page additions */
+.tabs { display: inline-flex; gap: .4rem; background: rgba(255,255,255,.03); border: 1px solid var(--border); padding: .35rem; border-radius: 12px; }
+.tab-btn { appearance: none; background: transparent; border: 1px solid transparent; color: var(--text); padding: .5rem .8rem; border-radius: 8px; cursor: pointer; font: inherit; }
+.tab-btn.is-active { background: var(--panel); border-color: var(--border); box-shadow: 0 4px 14px var(--shadow) inset; }
+.tab-panel { margin-top: 1rem; }
+
+.gallery-grid { display: grid; grid-template-columns: repeat( auto-fit, minmax(220px, 1fr) ); gap: .9rem; }
+.gallery-item { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; box-shadow: 0 6px 16px var(--shadow); }
+.gallery-item img { width: 100%; height: 100%; aspect-ratio: 1 / 1; object-fit: cover; transition: transform .25s ease; }
+.gallery-item:hover img { transform: scale(1.03); }
+.gallery-item figcaption { padding: .55rem .7rem; color: var(--muted); font-size: .95rem; border-top: 1px solid var(--border); }
+
+/* Utility */
+.muted { color: var(--muted); }
+
+
+/* Image modal */
+.modal { position: fixed; inset: 0; display: grid; place-items: center; background: rgba(0,0,0,0.6); opacity: 0; visibility: hidden; transition: opacity .2s ease, visibility .2s ease; z-index: 100; }
+.modal.is-open { opacity: 1; visibility: visible; }
+.modal-backdrop { position: absolute; inset: 0; }
+.modal-dialog { position: relative; background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: .4rem; box-shadow: 0 20px 50px var(--shadow); max-width: min(98vw, 1800px); max-height: 98vh; display: flex; flex-direction: column; }
+.modal-dialog img { max-width: 100%; width: 100%; height: auto; display: block; border-radius: 8px; object-fit: contain; max-height: calc(98vh - 70px); }
+.modal-caption { margin: 0 .25rem 0; color: var(--muted); border-top: 1px solid var(--border); padding-top: .5rem; margin-top: auto; }
+.modal-close { position: absolute; top: .3rem; right: .3rem; background: rgba(0,0,0,.4); border: 1px solid var(--border); color: var(--text); border-radius: 8px; font-size: 1.4rem; line-height: 1; width: 34px; height: 34px; cursor: pointer; }
+.modal-close:hover { background: rgba(0,0,0,.55); }
+body.modal-open { overflow: hidden; }
