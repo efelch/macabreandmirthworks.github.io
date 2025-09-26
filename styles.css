@@ -256,7 +256,7 @@ img { max-width: 100%; height: auto; display: block; }
   }
 
   /* Mobile: use smaller text title instead of icon */
-  .logo-text { display: inline !important; font-size: 1.25rem; letter-spacing: .3px; }
+  .logo-text { display: inline !important; font-size: 1.1rem; letter-spacing: .3px; }
   .logo-icon { display: none !important; }
 
   .header-inner { position: relative; }
@@ -311,3 +311,9 @@ img { max-width: 100%; height: auto; display: block; }
 .modal-close { position: absolute; top: .3rem; right: .3rem; background: rgba(0,0,0,.4); border: 1px solid var(--border); color: var(--text); border-radius: 8px; font-size: 1.4rem; line-height: 1; width: 34px; height: 34px; cursor: pointer; }
 .modal-close:hover { background: rgba(0,0,0,.55); }
 body.modal-open { overflow: hidden; }
+
+
+/* Extra-small phones: tighten logo title a bit more */
+@media (max-width: 360px) {
+  .site-header .logo .logo-text { font-size: 1rem; letter-spacing: .25px; }
+}
