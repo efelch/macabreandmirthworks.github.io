@@ -57,7 +57,7 @@ img { max-width: 100%; height: auto; display: block; }
 .logo-mark { color: var(--brand); font-size: 1.1rem; }
 .logo-text { font-family: 'Sackers Gothic Std', Cinzel, serif; font-weight: 600; letter-spacing: .5px; font-size: 2rem; }
 /* Small SVG logo shown on mobile */
-.logo-icon { display: none; height: 26px; width: auto; }
+.logo-icon { display: none; height: 26px; width: auto; filter: invert(1) brightness(1.15) contrast(1.1); }
 
 .nav ul { list-style: none; display: flex; gap: 1.2rem; margin: 0; padding: 0; align-items: center; }
 .nav a { color: var(--text); text-decoration: none; opacity: .9; }
@@ -280,7 +280,8 @@ img { max-width: 100%; height: auto; display: block; }
   .nav ul a { padding: .55rem .6rem; display: block; }
   .nav ul .btn { width: 100%; text-align: center; }
   /* Prevent overflow of inline menu on mobile */
-  .nav { margin-left: auto; }
+  .nav { margin-left: 0; }
+  .nav-toggle { margin-left: auto; }
 }
 
 
