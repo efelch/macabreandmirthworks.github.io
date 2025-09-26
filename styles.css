@@ -56,6 +56,8 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .logo-mark { color: var(--brand); font-size: 1.1rem; }
 .logo-text { font-family: 'Sackers Gothic Std', Cinzel, serif; font-weight: 600; letter-spacing: .5px; font-size: 2rem; }
+/* Small SVG logo shown on mobile */
+.logo-icon { display: none; height: 26px; width: auto; filter: invert(1) brightness(1.15) contrast(1.1); }
 
 .nav ul { list-style: none; display: flex; gap: 1.2rem; margin: 0; padding: 0; align-items: center; }
 .nav a { color: var(--text); text-decoration: none; opacity: .9; }
@@ -252,6 +254,10 @@ img { max-width: 100%; height: auto; display: block; }
     outline-offset: 2px;
     border-radius: 6px;
   }
+
+  /* Swap desktop text logo for compact SVG on mobile */
+  .logo-text { display: none; }
+  .logo-icon { display: inline-block; }
 
   .header-inner { position: relative; }
   .nav ul {
