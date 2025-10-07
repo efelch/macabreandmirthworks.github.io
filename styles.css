@@ -317,3 +317,8 @@ body.modal-open { overflow: hidden; }
 @media (max-width: 360px) {
   .site-header .logo .logo-text { font-size: 1rem; letter-spacing: .25px; }
 }
+/* Services */
+.services-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat( auto-fit, minmax(220px, 1fr) ); gap: .8rem; }
+.services-list li { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: .9rem 1rem; box-shadow: 0 6px 16px var(--shadow); }
+.services-list h3 { margin: 0 0 .3rem; font-weight: 700; font-family: 'Sackers Gothic Std', Cinzel, serif; }
+.services-list p { margin: 0; color: var(--muted); }
