@@ -100,7 +100,15 @@ img { max-width: 100%; height: auto; display: block; }
 .section-header p { margin: 0; color: var(--muted); }
 
 /* Grid */
-.grid.products { display: grid; grid-template-columns: repeat( auto-fit, minmax(280px, 1fr) ); gap: 1.2rem; }
+.grid.products { display: grid; grid-template-columns: repeat( 3, 1fr ); gap: 1.2rem; }
+
+@media (max-width: 900px) {
+    .grid.products { grid-template-columns: repeat( 2, 1fr ); }
+}
+
+@media (max-width: 600px) {
+    .grid.products { grid-template-columns: 1fr; }
+}
 
 /* Cards */
 .card { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; box-shadow: 0 6px 20px var(--shadow); display: flex; flex-direction: column; }
