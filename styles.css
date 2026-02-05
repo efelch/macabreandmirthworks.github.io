@@ -100,7 +100,7 @@ img { max-width: 100%; height: auto; display: block; }
 .section-header p { margin: 0; color: var(--muted); }
 
 /* Grid */
-.grid.products { display: grid; grid-template-columns: repeat( auto-fit, minmax(220px, 1fr) ); gap: 1.2rem; }
+.grid.products { display: grid; grid-template-columns: repeat( auto-fit, minmax(280px, 1fr) ); gap: 1.2rem; }
 
 /* Cards */
 .card { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; box-shadow: 0 6px 20px var(--shadow); display: flex; flex-direction: column; }
@@ -296,6 +296,8 @@ img { max-width: 100%; height: auto; display: block; }
 .gallery-grid { display: grid; grid-template-columns: repeat( auto-fit, minmax(220px, 1fr) ); gap: .9rem; }
 .gallery-item { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; box-shadow: 0 6px 16px var(--shadow); }
 .gallery-item img { width: 100%; height: 100%; aspect-ratio: 1 / 1; object-fit: cover; transition: transform .25s ease; }
+/* When a section has only one item, keep the thumbnail the same size as others */
+.gallery-grid.is-single { grid-template-columns: 220px; margin-inline: auto; justify-content: center; }
 /* Responsive video embed inside gallery items */
 .gallery-item .video { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; }
 .gallery-item .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
