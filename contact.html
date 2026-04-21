@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Contact Us — Macabre and Mirthworks</title>
+    <meta content="Send us a note with your questions or custom ideas." name="description">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="images/logo.png" rel="icon" type="image/png">
+    <link href="https://macabreandmirthworks.com/contact.html" rel="canonical">
+    <meta content="index, follow" name="robots">
+
+    <!-- Fonts & Performance Hints -->
+    <meta content="#0e0e10" name="theme-color">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link as="font" crossorigin href="fonts/sackersgothicstd-medium.otf" rel="preload" type="font/otf">
+    <link href="https://www.etsy.com" rel="dns-prefetch">
+    <link href="https://www.instagram.com" rel="dns-prefetch">
+    <link href="https://www.facebook.com" rel="dns-prefetch">
+    <link as="image" href="images/logo.svg" rel="preload" type="image/svg+xml">
+
+    <!-- Styles -->
+    <link href="styles.css" rel="stylesheet">
+
+    <!-- Social Sharing -->
+    <meta content="Contact Us — Macabre and Mirthworks" property="og:title">
+    <meta content="Send us a note with your questions or custom ideas." property="og:description">
+    <meta content="website" property="og:type">
+    <meta content="https://macabreandmirthworks.com/contact.html" property="og:url">
+    <meta content="https://macabreandmirthworks.com/images/logo.png" property="og:image">
+    <meta content="Macabre and Mirthworks" property="og:site_name">
+    <meta content="summary_large_image" name="twitter:card">
+
+    <!-- 100% privacy-first analytics -->
+    <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <div class="container header-inner">
+        <a aria-label="Macabre and Mirthworks home" class="logo" href="index.html">
+            <img class="logo-icon" src="images/logo.svg" alt="" aria-hidden="true">
+            <span class="logo-text">Macabre and Mirthworks</span>
+        </a>
+        <button class="nav-toggle" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
+            <span class="bar horiz" aria-hidden="true"></span>
+            <span class="bar vert" aria-hidden="true"></span>
+        </button>
+        <nav aria-label="Primary" class="nav">
+            <ul id="primary-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="btn etsy" href="https://www.etsy.com/shop/MacabreAndMirthworks" rel="noopener noreferrer" target="_blank">Shop Etsy</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main id="main">
+    <!-- Contact -->
+    <section class="section" id="contact">
+        <div class="container">
+            <header class="section-header">
+                <h2>Contact Us</h2>
+                <p>Send us a note with your questions or custom ideas. We’ll reply by email.</p>
+            </header>
+
+            <form action="https://formspree.io/f/mvgbjjjo" class="contact-form" id="contact-form" method="POST"
+                  novalidate>
+                <div class="form-row">
+                    <label for="name">Name</label>
+                    <input autocomplete="name" id="name" name="name" placeholder="Your name" required type="text">
+                </div>
+                <div class="form-row">
+                    <label for="email">Email</label>
+                    <input autocomplete="email" id="email" name="email" placeholder="you@example.com" required
+                           type="email">
+                </div>
+                <div class="form-row">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="How can we help?" required rows="6"></textarea>
+                </div>
+
+                <!-- Honeypot for basic bot deterrence -->
+                <input aria-hidden="true" autocomplete="off" class="hp-field" name="_gotcha" tabindex="-1" type="text">
+
+                <!-- Success redirect -->
+                <input name="_subject" type="hidden" value="New message from macabreandmirthworks.com">
+                <input name="_format" type="hidden" value="plain">
+
+                <div class="form-actions section-cta">
+                    <button class="btn primary" type="submit">Send message</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <nav aria-label="Social">
+            <ul class="social-links">
+                <li><a href="https://www.instagram.com/macabreandmirthworks/" rel="noopener noreferrer" target="_blank">Instagram</a>
+                </li>
+                <li><a href="https://www.facebook.com/macabreandmirthworks" rel="noopener noreferrer" target="_blank">Facebook</a>
+                </li>
+                <li><a href="https://www.youtube.com/@MacabreAndMirthworks" rel="noopener noreferrer" target="_blank">YouTube</a>
+                </li>
+                <li><a href="https://www.etsy.com/shop/MacabreAndMirthworks" rel="noopener noreferrer" target="_blank">Etsy</a>
+                </li>
+            </ul>
+        </nav>
+        <small class="copyright">© <span id="year"></span> Macabre and Mirthworks. All rights reserved.</small>
+    </div>
+</footer>
+
+<script>
+    // Update year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navList = document.getElementById('primary-nav');
+    if (navToggle && navList) {
+        const closeMenu = () => {
+            document.body.classList.remove('nav-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+            navToggle.setAttribute('aria-label', 'Open menu');
+        };
+        navToggle.addEventListener('click', () => {
+            const open = navToggle.getAttribute('aria-expanded') === 'true';
+            if (open) {
+                closeMenu();
+            } else {
+                document.body.classList.add('nav-open');
+                navToggle.setAttribute('aria-expanded', 'true');
+                navToggle.setAttribute('aria-label', 'Close menu');
+            }
+        });
+        // Close when a nav link is clicked
+        navList.addEventListener('click', (e) => {
+            if (e.target.closest('a')) closeMenu();
+        });
+        // Close on Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeMenu();
+        });
+    }
+</script>
+</body>
+</html>

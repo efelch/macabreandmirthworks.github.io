@@ -69,7 +69,7 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
     <div class="container header-inner">
-        <a aria-label="Macabre and Mirthworks home" class="logo" href="#home">
+        <a aria-label="Macabre and Mirthworks home" class="logo" href="index.html">
             <img class="logo-icon" src="images/logo.svg" alt="" aria-hidden="true">
             <span class="logo-text">Macabre and Mirthworks</span>
         </a>
@@ -79,11 +79,9 @@
         </button>
         <nav aria-label="Primary" class="nav">
             <ul id="primary-nav">
-                <li><a href="index.html#services">Services</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#faq">FAQ</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <li><a class="btn etsy" href="https://www.etsy.com/shop/MacabreAndMirthworks" rel="noopener noreferrer" target="_blank">Shop Etsy</a></li>
             </ul>
         </nav>
@@ -208,43 +206,6 @@
         </div>
     </section>
 
-    <!-- Contact -->
-    <section class="section alt" id="contact">
-        <div class="container">
-            <header class="section-header">
-                <h2>Contact Us</h2>
-                <p>Send us a note with your questions or custom ideas. We’ll reply by email.</p>
-            </header>
-
-            <form action="https://formspree.io/f/mvgbjjjo" class="contact-form" id="contact-form" method="POST"
-                  novalidate>
-                <div class="form-row">
-                    <label for="name">Name</label>
-                    <input autocomplete="name" id="name" name="name" placeholder="Your name" required type="text">
-                </div>
-                <div class="form-row">
-                    <label for="email">Email</label>
-                    <input autocomplete="email" id="email" name="email" placeholder="you@example.com" required
-                           type="email">
-                </div>
-                <div class="form-row">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="How can we help?" required rows="6"></textarea>
-                </div>
-
-                <!-- Honeypot for basic bot deterrence -->
-                <input aria-hidden="true" autocomplete="off" class="hp-field" name="_gotcha" tabindex="-1" type="text">
-
-                <!-- Success redirect (optional): replace with a thank-you page if you add one -->
-                <input name="_subject" type="hidden" value="New message from macabreandmirthworks.com">
-                <input name="_format" type="hidden" value="plain">
-
-                <div class="form-actions section-cta">
-                    <button class="btn primary" type="submit">Send message</button>
-                </div>
-            </form>
-        </div>
-    </section>
 </main>
 
 <footer class="site-footer">
