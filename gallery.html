@@ -21,7 +21,8 @@
     <link as="image" href="images/logo.svg" rel="preload" type="image/svg+xml">
 
     <!-- Styles -->
-    <link href="styles.css" rel="stylesheet">
+    <link href="layout.css" rel="stylesheet">
+    <link href="theme.css" rel="stylesheet">
     <script src="scripts.js" defer></script>
 
     <!-- Social Sharing -->
@@ -73,116 +74,656 @@
                     <li aria-current="page">Gallery</li>
                 </ol>
             </nav>
-            <header class="section-header">
-                <h1>Gallery</h1>
-            </header>
-            <section class="gallery-section" aria-labelledby="halloween-heading">
-                <div class="section-header left">
-                    <h2 id="halloween-heading">Halloween</h2>
-                </div>
-                <div class="gallery-grid">
-                    <figure class="gallery-item"><img alt="Halloween product" src="images/Products/Halloween/Hats.webp" loading="lazy" decoding="async"><figcaption>Halloween</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Halloween product" src="images/Products/Halloween/Soap.webp" loading="lazy" decoding="async"><figcaption>Halloween</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Halloween product" src="images/Products/Halloween/Doormat.webp" loading="lazy" decoding="async"><figcaption>Halloween</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Halloween product" src="images/Products/Halloween/Coasters.webp" loading="lazy" decoding="async"><figcaption>Halloween</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Halloween product" src="images/Products/Halloween/IMG_6113.webp" loading="lazy" decoding="async"><figcaption>Halloween</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Halloween product" src="images/Products/Halloween/IMG_6114.webp" loading="lazy" decoding="async"><figcaption>Halloween</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Halloween product" src="images/Products/Halloween/IMG_6115.webp" loading="lazy" decoding="async"><figcaption>Halloween</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Halloween product" src="images/Products/Halloween/IMG_6116.webp" loading="lazy" decoding="async"><figcaption>Halloween</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Halloween product" src="images/Products/Halloween/IMG_6117.webp" loading="lazy" decoding="async"><figcaption>Halloween</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Halloween product" src="images/Products/Halloween/IMG_6118.webp" loading="lazy" decoding="async"><figcaption>Halloween</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Halloween product" src="images/Products/Halloween/IMG_6119.webp" loading="lazy" decoding="async"><figcaption>Halloween</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Halloween product" src="images/Products/Halloween/IMG_6120.webp" loading="lazy" decoding="async"><figcaption>Halloween</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Halloween product" src="images/Products/Halloween/IMG_6121.webp" loading="lazy" decoding="async"><figcaption>Halloween</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Halloween product" src="images/Products/Halloween/IMG_6124.webp" loading="lazy" decoding="async"><figcaption>Halloween</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Halloween product" src="images/Products/Halloween/IMG_6125.webp" loading="lazy" decoding="async"><figcaption>Halloween</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Halloween product" src="images/Products/Halloween/IMG_6128.webp" loading="lazy" decoding="async"><figcaption>Halloween</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Halloween product" src="images/Products/Halloween/IMG_6129.webp" loading="lazy" decoding="async"><figcaption>Halloween</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Halloween product" src="images/Products/Halloween/IMG_6132.webp" loading="lazy" decoding="async"><figcaption>Halloween</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Halloween product" src="images/Products/Halloween/IMG_6134.webp" loading="lazy" decoding="async"><figcaption>Halloween</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Halloween product" src="images/Products/Halloween/Coasters1.webp" loading="lazy" decoding="async"><figcaption>Halloween</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Halloween product" src="images/Products/Halloween/Coasters2.webp" loading="lazy" decoding="async"><figcaption>Halloween</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Halloween product" src="images/Products/Halloween/Coasters3.webp" loading="lazy" decoding="async"><figcaption>Halloween</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Halloween product" src="images/Products/Halloween/Coasters4.webp" loading="lazy" decoding="async"><figcaption>Halloween</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Halloween product" src="images/Products/Halloween/Halloween.webp" loading="lazy" decoding="async"><figcaption>Halloween</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Halloween product" src="images/Products/Halloween/HowlOWeen.webp" loading="lazy" decoding="async"><figcaption>Halloween</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Halloween product" src="images/Products/Halloween/SlateCoasters.webp" loading="lazy" decoding="async"><figcaption>Halloween</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Halloween product" src="images/Products/Halloween/HalloweenTicTacToe.webp" loading="lazy" decoding="async"><figcaption>Halloween</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Halloween product" src="images/Products/Halloween/D3A648AE-D0F2-445E-B64B-ACF0EE98CBDF.webp" loading="lazy" decoding="async"><figcaption>Halloween</figcaption></figure>
+            <div class="section-title">
+                <h1 id="gallery-title">Gallery</h1>
+                <p>A collection of our handmade seasonal decor and home goods. We hope these inspire you!</p>
+            </div>
+
+            <nav class="portfolio-filter" aria-label="Gallery categories">
+                <a href="#halloween">Halloween</a>
+                <a href="#christmasother">Christmas Other</a>
+                <a href="#christmasprops">Christmas Props</a>
+                <a href="#christmasornaments">Christmas Ornaments</a>
+            </nav>
+            <section class="portfolio-group" id="halloween" aria-labelledby="halloween-heading">
+                <h2 class="group-title" id="halloween-heading">Halloween</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/Halloween/Hats.webp" alt="Halloween product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halloween</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/Halloween/Soap.webp" alt="Halloween product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halloween</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/Halloween/Doormat.webp" alt="Halloween product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halloween</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/Halloween/Coasters.webp" alt="Halloween product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halloween</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/Halloween/IMG_6113.webp" alt="Halloween product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halloween</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/Halloween/IMG_6114.webp" alt="Halloween product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halloween</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/Halloween/IMG_6115.webp" alt="Halloween product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halloween</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/Halloween/IMG_6116.webp" alt="Halloween product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halloween</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/Halloween/IMG_6117.webp" alt="Halloween product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halloween</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/Halloween/IMG_6118.webp" alt="Halloween product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halloween</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/Halloween/IMG_6119.webp" alt="Halloween product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halloween</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/Halloween/IMG_6120.webp" alt="Halloween product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halloween</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/Halloween/IMG_6121.webp" alt="Halloween product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halloween</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/Halloween/IMG_6124.webp" alt="Halloween product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halloween</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/Halloween/IMG_6125.webp" alt="Halloween product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halloween</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/Halloween/IMG_6128.webp" alt="Halloween product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halloween</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/Halloween/IMG_6129.webp" alt="Halloween product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halloween</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/Halloween/IMG_6132.webp" alt="Halloween product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halloween</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/Halloween/IMG_6134.webp" alt="Halloween product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halloween</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/Halloween/Coasters1.webp" alt="Halloween product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halloween</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/Halloween/Coasters2.webp" alt="Halloween product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halloween</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/Halloween/Coasters3.webp" alt="Halloween product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halloween</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/Halloween/Coasters4.webp" alt="Halloween product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halloween</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/Halloween/Halloween.webp" alt="Halloween product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halloween</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/Halloween/HowlOWeen.webp" alt="Halloween product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halloween</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/Halloween/SlateCoasters.webp" alt="Halloween product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halloween</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/Halloween/HalloweenTicTacToe.webp" alt="Halloween product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halloween</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/Halloween/D3A648AE-D0F2-445E-B64B-ACF0EE98CBDF.webp" alt="Halloween product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Halloween</h3>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <section class="gallery-section" aria-labelledby="christmasother-heading">
-                <div class="section-header left">
-                    <h2 id="christmasother-heading">Christmas Other</h2>
-                </div>
-                <div class="gallery-grid">
-                    <figure class="gallery-item"><img alt="Christmas Other product" src="images/Products/ChristmasOther/Merry-Christmas-Door-Wreath-Sign-Graphics-105269288-1-1-580x387.webp" loading="lazy" decoding="async"><figcaption>Christmas Other</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Other product" src="images/Products/ChristmasOther/Merry-Christmas-Door-Sign-SVG-cut-file-Graphics-33199292-580x387.webp" loading="lazy" decoding="async"><figcaption>Christmas Other</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Other product" src="images/Products/ChristmasOther/Santa-stop-here-svg-Door-hanger-svg-Graphics-19144179-1-1-580x363.webp" loading="lazy" decoding="async"><figcaption>Christmas Other</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Other product" src="images/Products/ChristmasOther/We-Wish-You-A-Merry-Christmas-Sign-Graphics-104312827-1-1-580x387.webp" loading="lazy" decoding="async"><figcaption>Christmas Other</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Other product" src="images/Products/ChristmasOther/Were-As-Lit-I-Christmas-Doormat-SVG-Graphics-81351051-1-1-580x387.webp" loading="lazy" decoding="async"><figcaption>Christmas Other</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Other product" src="images/Products/ChristmasOther/Dear-Santa-Letter-Envelope-Laser-Cut-Graphics-107831612-1-1-580x387.webp" loading="lazy" decoding="async"><figcaption>Christmas Other</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Other product" src="images/Products/ChristmasOther/This-House-I-Christmas-Doormat-SVGPNG-Graphics-81350737-1-1-580x387.webp" loading="lazy" decoding="async"><figcaption>Christmas Other</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Other product" src="images/Products/ChristmasOther/Merry-Christmas-I-Christmas-Doormat-SVG-Graphics-81273421-1-1-580x387.webp" loading="lazy" decoding="async"><figcaption>Christmas Other</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Other product" src="images/Products/ChristmasOther/Nativity-Christmas-Door-Hanger-Svg-Laser-Cutting-128897359-1-1-580x441.webp" loading="lazy" decoding="async"><figcaption>Christmas Other</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Other product" src="images/Products/ChristmasOther/Personalized-Our-Crew-Family-Ornament-Laser-Cutting-134093003-1-1-580x441.webp" loading="lazy" decoding="async"><figcaption>Christmas Other</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Other product" src="images/Products/ChristmasOther/Christmas-Wall-Sign-Laser-Cut-Holidays-Laser-Cutting-129733458-1-1-580x387.webp" loading="lazy" decoding="async"><figcaption>Christmas Other</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Other product" src="images/Products/ChristmasOther/Christmas-Wall-Sign-Laser-Cut-Holidays-Laser-Cutting-129733466-1-1-580x387.webp" loading="lazy" decoding="async"><figcaption>Christmas Other</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Other product" src="images/Products/ChristmasOther/Bundle-Christmas-Door-Sign-Cute-Xmas-Svg-Laser-Cutting-134762097-2-580x441.webp" loading="lazy" decoding="async"><figcaption>Christmas Other</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Other product" src="images/Products/ChristmasOther/Bundle-Christmas-Door-Sign-Cute-Xmas-Svg-Laser-Cutting-134762097-5-580x441.webp" loading="lazy" decoding="async"><figcaption>Christmas Other</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Other product" src="images/Products/ChristmasOther/Bundle-Christmas-Door-Sign-Cute-Xmas-Svg-Laser-Cutting-134762097-9-580x441.webp" loading="lazy" decoding="async"><figcaption>Christmas Other</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Other product" src="images/Products/ChristmasOther/Santa-Stop-Here-Christmas-Door-Sign-SVG-Laser-Cutting-132746417-1-1-580x441.webp" loading="lazy" decoding="async"><figcaption>Christmas Other</figcaption></figure>
+            <section class="portfolio-group" id="christmasother" aria-labelledby="christmasother-heading">
+                <h2 class="group-title" id="christmasother-heading">Christmas Other</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOther/Merry-Christmas-Door-Wreath-Sign-Graphics-105269288-1-1-580x387.webp" alt="Christmas Other product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Other</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOther/Merry-Christmas-Door-Sign-SVG-cut-file-Graphics-33199292-580x387.webp" alt="Christmas Other product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Other</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOther/Santa-stop-here-svg-Door-hanger-svg-Graphics-19144179-1-1-580x363.webp" alt="Christmas Other product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Other</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOther/We-Wish-You-A-Merry-Christmas-Sign-Graphics-104312827-1-1-580x387.webp" alt="Christmas Other product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Other</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOther/Were-As-Lit-I-Christmas-Doormat-SVG-Graphics-81351051-1-1-580x387.webp" alt="Christmas Other product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Other</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOther/Dear-Santa-Letter-Envelope-Laser-Cut-Graphics-107831612-1-1-580x387.webp" alt="Christmas Other product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Other</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOther/This-House-I-Christmas-Doormat-SVGPNG-Graphics-81350737-1-1-580x387.webp" alt="Christmas Other product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Other</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOther/Merry-Christmas-I-Christmas-Doormat-SVG-Graphics-81273421-1-1-580x387.webp" alt="Christmas Other product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Other</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOther/Nativity-Christmas-Door-Hanger-Svg-Laser-Cutting-128897359-1-1-580x441.webp" alt="Christmas Other product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Other</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOther/Personalized-Our-Crew-Family-Ornament-Laser-Cutting-134093003-1-1-580x441.webp" alt="Christmas Other product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Other</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOther/Christmas-Wall-Sign-Laser-Cut-Holidays-Laser-Cutting-129733458-1-1-580x387.webp" alt="Christmas Other product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Other</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOther/Christmas-Wall-Sign-Laser-Cut-Holidays-Laser-Cutting-129733466-1-1-580x387.webp" alt="Christmas Other product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Other</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOther/Bundle-Christmas-Door-Sign-Cute-Xmas-Svg-Laser-Cutting-134762097-2-580x441.webp" alt="Christmas Other product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Other</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOther/Bundle-Christmas-Door-Sign-Cute-Xmas-Svg-Laser-Cutting-134762097-5-580x441.webp" alt="Christmas Other product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Other</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOther/Bundle-Christmas-Door-Sign-Cute-Xmas-Svg-Laser-Cutting-134762097-9-580x441.webp" alt="Christmas Other product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Other</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOther/Santa-Stop-Here-Christmas-Door-Sign-SVG-Laser-Cutting-132746417-1-1-580x441.webp" alt="Christmas Other product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Other</h3>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <section class="gallery-section" aria-labelledby="christmasprops-heading">
-                <div class="section-header left">
-                    <h2 id="christmasprops-heading">Christmas Props</h2>
-                </div>
-                <div class="gallery-grid">
-                    <figure class="gallery-item"><img alt="Christmas Props product" src="images/Products/ChristmasProps/Gingerbread.webp" loading="lazy" decoding="async"><figcaption>Christmas Props</figcaption></figure>
+            <section class="portfolio-group" id="christmasprops" aria-labelledby="christmasprops-heading">
+                <h2 class="group-title" id="christmasprops-heading">Christmas Props</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasProps/Gingerbread.webp" alt="Christmas Props product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Props</h3>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <section class="gallery-section" aria-labelledby="christmasornaments-heading">
-                <div class="section-header left">
-                    <h2 id="christmasornaments-heading">Christmas Ornaments</h2>
-                </div>
-                <div class="gallery-grid">
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/IMG_7594.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/D1712CE5-82DD-4791-B0D3-4EAA2CF74430 Large.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/Nativity-Ornament-SVG-Bundle-Laser-Cutting-135677757-1-1-580x441.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/16335d39b5fd082d979ffafdbc6347273d1a901d7c749df07d2bbb1807caaab7.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/2544a9758f6786efeb32c761a4d80baf929c35c3b4caf5e4199764be06dfd78f.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/25d7f5e31228f6fa863017545db8a0f45560bdb849546a1873a856d87865e9c7.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/270ecb5eb4ed25a5d77e0520e764799ab97a1c36b242f92bef77a8eeeb619bd1.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/281f934a92af38e3891f82ab69388ff2dd78ac97b3e7d9924265bd54e4c6bd73.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/2dc2c4523c2219b25bf6d5811e231db3d5a7b49efa57f3583f13218c0c7c6db0.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/348abb9d051e698668d63678241ee842cb433a73df506764dd09f8784143cb38.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/37fb364a38ae4afd7a5dabab467899565f0ae3198f0d69a23b5a2c4869b31e49.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/456c686b9523e381969901ce4d22c70bbe206c6f8c8d29b1b8844361e8779167.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/4d519c2067fca6e9ce8d20eb2ab7566059277d00972cf176d5780b5149767ad5.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/5d1d0b2d3954313f6397a42efd3b23b7cf7c78b01dc41a7c4ef953239ceb80db.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/659cec4d5dce140eae205b5c2fb09350a4d2e38fcc330c8f6084449521620025.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/7cb7c830b5d03365e8d38e01e38a9d579a0b3e322f34a2629ec2df1aba224ae4.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/9059d70fc81a0b5cd3d1fb7a6d28afabcbd0cc71d4e46e0a0f17d170e6ec5e37.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/a196c141d9df9a48127e35fa79647de0b9efbe17d7871b15f1e6b433abbc5b87.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/a6d269b335aa675c08ee40f4f10a3871ef0a726886cf52336eb31a4553070816.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/b02dfc507faaeca43813a333be99990bfc4fe22dbae8b252fb5e92d217cfce4f.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/cb4b96dc8a34e5e0da7fe76de6d4918975b10c94a0bafb72f2b52eec9982b418.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/daba80aa42738fcad46013709848108117feec092c5bb3ab35d7e01ff2b1f2ad.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/e00ce5c36b07e1099279a5c14ad2e5ce5a63145816e6e2ea9b892dfc3893f698.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/e63c88c330f8250032367fa91e382c61ea7876511d7def8887d99c72b2f4e04d.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/f06f70eea8425709a428cb65ab80b50e55ba765ad34846636a31cd543ef864ed.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/f4569a9865f1373c56ee77e2144f16235c72b97883a549f104405110839abcde.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/f85565090ba65ba08aab1e71f5663528daf859c674ad1d449cdf90522db4e583.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/f8fb6f9dd360e7070ed961459645166d8698092857023e6b78a04248072b86e7.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/6cee3edbaf96b15562b1721c57c891a57410b96ff83466d826f3fe0014ec5b40.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/Christmas-Family-Ornament-Laser-ut-Laser-Cutting-131116428-1-1-580x387.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
-                    <figure class="gallery-item"><img alt="Christmas Ornaments product" src="images/Products/ChristmasOrnaments/Bible-Verse-Nativity-Ornament-SVG-Bundle-Laser-Cutting-135167807-1-1-580x441.webp" loading="lazy" decoding="async"><figcaption>Christmas Ornaments</figcaption></figure>
+            <section class="portfolio-group" id="christmasornaments" aria-labelledby="christmasornaments-heading">
+                <h2 class="group-title" id="christmasornaments-heading">Christmas Ornaments</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/IMG_7594.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/D1712CE5-82DD-4791-B0D3-4EAA2CF74430 Large.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/Nativity-Ornament-SVG-Bundle-Laser-Cutting-135677757-1-1-580x441.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/16335d39b5fd082d979ffafdbc6347273d1a901d7c749df07d2bbb1807caaab7.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/2544a9758f6786efeb32c761a4d80baf929c35c3b4caf5e4199764be06dfd78f.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/25d7f5e31228f6fa863017545db8a0f45560bdb849546a1873a856d87865e9c7.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/270ecb5eb4ed25a5d77e0520e764799ab97a1c36b242f92bef77a8eeeb619bd1.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/281f934a92af38e3891f82ab69388ff2dd78ac97b3e7d9924265bd54e4c6bd73.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/2dc2c4523c2219b25bf6d5811e231db3d5a7b49efa57f3583f13218c0c7c6db0.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/348abb9d051e698668d63678241ee842cb433a73df506764dd09f8784143cb38.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/37fb364a38ae4afd7a5dabab467899565f0ae3198f0d69a23b5a2c4869b31e49.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/456c686b9523e381969901ce4d22c70bbe206c6f8c8d29b1b8844361e8779167.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/4d519c2067fca6e9ce8d20eb2ab7566059277d00972cf176d5780b5149767ad5.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/5d1d0b2d3954313f6397a42efd3b23b7cf7c78b01dc41a7c4ef953239ceb80db.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/659cec4d5dce140eae205b5c2fb09350a4d2e38fcc330c8f6084449521620025.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/7cb7c830b5d03365e8d38e01e38a9d579a0b3e322f34a2629ec2df1aba224ae4.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/9059d70fc81a0b5cd3d1fb7a6d28afabcbd0cc71d4e46e0a0f17d170e6ec5e37.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/a196c141d9df9a48127e35fa79647de0b9efbe17d7871b15f1e6b433abbc5b87.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/a6d269b335aa675c08ee40f4f10a3871ef0a726886cf52336eb31a4553070816.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/b02dfc507faaeca43813a333be99990bfc4fe22dbae8b252fb5e92d217cfce4f.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/cb4b96dc8a34e5e0da7fe76de6d4918975b10c94a0bafb72f2b52eec9982b418.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/daba80aa42738fcad46013709848108117feec092c5bb3ab35d7e01ff2b1f2ad.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/e00ce5c36b07e1099279a5c14ad2e5ce5a63145816e6e2ea9b892dfc3893f698.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/e63c88c330f8250032367fa91e382c61ea7876511d7def8887d99c72b2f4e04d.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/f06f70eea8425709a428cb65ab80b50e55ba765ad34846636a31cd543ef864ed.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/f4569a9865f1373c56ee77e2144f16235c72b97883a549f104405110839abcde.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/f85565090ba65ba08aab1e71f5663528daf859c674ad1d449cdf90522db4e583.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/f8fb6f9dd360e7070ed961459645166d8698092857023e6b78a04248072b86e7.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/6cee3edbaf96b15562b1721c57c891a57410b96ff83466d826f3fe0014ec5b40.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/Christmas-Family-Ornament-Laser-ut-Laser-Cutting-131116428-1-1-580x387.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Products/ChristmasOrnaments/Bible-Verse-Nativity-Ornament-SVG-Bundle-Laser-Cutting-135167807-1-1-580x441.webp" alt="Christmas Ornaments product" loading="lazy" width="400" height="400">
+                        </div>
+                        <div class="product-info">
+                            <h3>Christmas Ornaments</h3>
+                        </div>
+                    </div>
                 </div>
             </section>
+        </div>
+    </section>
+
+    <section class="section cta-section">
+        <div class="container">
+            <h2>Ready to start your own project?</h2>
+            <p>We'd love to help you create something special and unique.</p>
+            <a href="contact.html" class="btn btn-primary">Start Your Custom Design</a>
         </div>
     </section>
 </main>
@@ -209,13 +750,13 @@
 <button class="back-to-top" type="button" aria-label="Back to top">&uarr;</button>
 
 <!-- Image Modal -->
-<dialog aria-label="Image preview" class="modal" id="imageModal">
+<dialog class="modal" id="imageModal">
     <div class="modal-backdrop" data-close="true"></div>
-    <div class="modal-dialog">
+    <div aria-label="Image preview" class="modal-dialog">
         <button aria-label="Close image preview" class="modal-close" type="button">&times;</button>
         <button aria-label="Previous image" class="modal-nav modal-prev" type="button">&#8249;</button>
-        <button aria-label="Next image" class="modal-nav modal-next" type="button">&#8250;</button>
         <img alt="" id="modalImage">
+        <button aria-label="Next image" class="modal-nav modal-next" type="button">&#8250;</button>
         <p class="modal-caption" id="modalCaption"></p>
     </div>
 </dialog>
