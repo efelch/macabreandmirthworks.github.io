@@ -5,7 +5,7 @@
     <title>Custom Colors — Macabre and Mirthworks</title>
     <meta name="description" content="Common paint and wood stain color options for custom orders.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="icon" type="image/webp" href="images/logo.webp">
     <link rel="canonical" href="https://macabreandmirthworks.com/colors.html">
     <meta name="robots" content="index, follow">
 
@@ -22,6 +22,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 
     <!-- Page-local styles for swatch grid (kept minimal) -->
     <style>
@@ -46,9 +47,13 @@
     <meta property="og:description" content="Common paint and wood stain color options for custom orders.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://macabreandmirthworks.com/colors.html">
-    <meta property="og:image" content="https://macabreandmirthworks.com/images/logo.png">
+    <meta property="og:image" content="https://macabreandmirthworks.com/images/logo.webp">
     <meta property="og:site_name" content="Macabre and Mirthworks">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Custom Colors — Macabre and Mirthworks">
+    <meta name="twitter:description" content="Common paint and wood stain color options for custom orders.">
+    <meta name="twitter:url" content="https://macabreandmirthworks.com/colors.html">
+    <meta name="twitter:image" content="https://macabreandmirthworks.com/images/logo.webp">
 
     <!-- 100% privacy-first analytics -->
     <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
@@ -79,6 +84,12 @@
 <main id="main">
     <section class="section" id="colors">
         <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li aria-current="page">Custom Colors</li>
+                </ol>
+            </nav>
             <header class="section-header">
                 <h1>Custom Color Options</h1>
                 <p>Planning a custom order? We recommend selecting colors from Rust-Oleum's line of spray paints, or Varathane's wood stains. We can hand paint using Apple Barrel paints or paint markers, but since this takes longer there is an upcharge.
@@ -471,33 +482,6 @@
     </div>
 </footer>
 
-<script>
-    // Update year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Mobile nav toggle (same behavior as other pages)
-    const navToggle = document.querySelector('.nav-toggle');
-    const navList = document.getElementById('primary-nav');
-    if (navToggle && navList) {
-        const closeMenu = () => {
-            document.body.classList.remove('nav-open');
-            navToggle.setAttribute('aria-expanded', 'false');
-            navToggle.setAttribute('aria-label', 'Open menu');
-        };
-        navToggle.addEventListener('click', () => {
-            const open = navToggle.getAttribute('aria-expanded') === 'true';
-            if (open) {
-                closeMenu();
-            } else {
-                document.body.classList.add('nav-open');
-                navToggle.setAttribute('aria-expanded', 'true');
-                navToggle.setAttribute('aria-label', 'Close menu');
-            }
-        });
-        navList.addEventListener('click', (e) => {
-            if (e.target.closest('a')) closeMenu();
-        });
-    }
-</script>
+<button class="back-to-top" type="button" aria-label="Back to top">&uarr;</button>
 </body>
 </html>

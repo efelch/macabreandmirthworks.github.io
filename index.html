@@ -7,7 +7,7 @@
           name="description">
     <meta content="Macabre and Mirthworks" name="author">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link href="images/logo.png" rel="icon" type="image/png">
+    <link href="images/logo.webp" rel="icon" type="image/webp">
     <link href="https://macabreandmirthworks.com/" rel="canonical">
     <meta content="index, follow" name="robots">
 
@@ -29,6 +29,7 @@
 
     <!-- Styles -->
     <link href="styles.css" rel="stylesheet">
+    <script src="scripts.js" defer></script>
 
     <!-- Social Sharing -->
     <meta content="Macabre and Mirthworks — Handmade Seasonal Decor & Home Goods" property="og:title">
@@ -36,19 +37,33 @@
           property="og:description">
     <meta content="website" property="og:type">
     <meta content="https://macabreandmirthworks.com/" property="og:url">
-    <meta content="https://macabreandmirthworks.com/images/logo.png" property="og:image">
+    <meta content="https://macabreandmirthworks.com/images/logo.webp" property="og:image">
     <meta content="Macabre and Mirthworks" property="og:site_name">
     <meta content="summary_large_image" name="twitter:card">
+    <meta content="Macabre and Mirthworks — Handmade Seasonal Decor & Home Goods" name="twitter:title">
+    <meta content="Custom Halloween and Christmas props, decor, and home goods. Shop our Etsy store." name="twitter:description">
+    <meta content="https://macabreandmirthworks.com/" name="twitter:url">
+    <meta content="https://macabreandmirthworks.com/images/logo.webp" name="twitter:image">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "Organization",
+            "@type": "LocalBusiness",
             "name": "Macabre and Mirthworks",
+            "description": "Handmade Halloween and Christmas props, decor, and home goods, plus custom laser engraving, 3D printing, and holiday decorating consultation in the Charleston Lowcountry.",
             "url": "https://macabreandmirthworks.com/",
-            "logo": "https://macabreandmirthworks.com/images/logo.png",
+            "logo": "https://macabreandmirthworks.com/images/logo.webp",
+            "image": "https://macabreandmirthworks.com/images/logo.webp",
+            "priceRange": "$$",
+            "areaServed": [
+                { "@type": "City", "name": "Charleston" },
+                { "@type": "City", "name": "North Charleston" },
+                { "@type": "City", "name": "Summerville" },
+                { "@type": "City", "name": "Goose Creek" }
+            ],
             "sameAs": [
                 "https://www.instagram.com/macabreandmirthworks/",
                 "https://www.facebook.com/macabreandmirthworks",
+                "https://www.youtube.com/@MacabreAndMirthworks",
                 "https://www.etsy.com/shop/MacabreAndMirthworks"
             ]
         }
@@ -140,7 +155,7 @@
             <div class="about-media">
                 <img alt="Monica and Edward"
                      decoding="async"
-                     loading="lazy" sizes="(max-width: 800px) 100vw, 50vw" src="images/AboutUs.jpeg">
+                     loading="lazy" sizes="(max-width: 800px) 100vw, 50vw" src="images/AboutUs.webp">
             </div>
             <div class="about-copy">
                 <header class="section-header left">
@@ -228,38 +243,6 @@
     </div>
 </footer>
 
-<script>
-    // Update year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Mobile nav toggle
-    const navToggle = document.querySelector('.nav-toggle');
-    const navList = document.getElementById('primary-nav');
-    if (navToggle && navList) {
-        const closeMenu = () => {
-            document.body.classList.remove('nav-open');
-            navToggle.setAttribute('aria-expanded', 'false');
-            navToggle.setAttribute('aria-label', 'Open menu');
-        };
-        navToggle.addEventListener('click', () => {
-            const open = navToggle.getAttribute('aria-expanded') === 'true';
-            if (open) {
-                closeMenu();
-            } else {
-                document.body.classList.add('nav-open');
-                navToggle.setAttribute('aria-expanded', 'true');
-                navToggle.setAttribute('aria-label', 'Close menu');
-            }
-        });
-        // Close when a nav link is clicked
-        navList.addEventListener('click', (e) => {
-            if (e.target.closest('a')) closeMenu();
-        });
-        // Close on Escape
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeMenu();
-        });
-    }
-</script>
+<button class="back-to-top" type="button" aria-label="Back to top">&uarr;</button>
 </body>
 </html>
