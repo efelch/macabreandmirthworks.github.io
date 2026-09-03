@@ -64,7 +64,6 @@ a:hover { color: var(--text); }
 .btn.facebook:hover { background: rgba(24,119,242,.12); }
 .btn.youtube { border-color: #FF0000; color: #ffd6d6; }
 .btn.youtube:hover { background: rgba(255,0,0,.12); }
-.btn.paint { background: linear-gradient(180deg, #9a4d50, #7f3b3e 60%); color: #ffffff; border-color: #7f3b3e; font-weight: 700; }
 
 /* Hero */
 .hero h1 { font-family: var(--font-head); }
@@ -89,14 +88,6 @@ a:hover { color: var(--text); }
 /* FAQ */
 .faq-list details { background: var(--panel); border-color: var(--border); }
 .faq-list p { color: var(--muted); }
-
-/* Color/material swatches */
-.swatch-header { border-color: var(--border); }
-.swatch { background: var(--panel); border-color: var(--border); box-shadow: 0 6px 20px var(--shadow); }
-.swatch .chip { border-color: var(--border); }
-.swatch .name { font-family: var(--font-head); }
-.swatch .desc,
-.legend { color: var(--muted); }
 
 /* Footer */
 .site-footer { border-top-color: var(--border); background: #0c0c0e; }
