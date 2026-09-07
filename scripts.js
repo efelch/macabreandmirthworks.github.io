@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const img = card.querySelector('img');
             const title = card.querySelector('h3')?.textContent || '';
             if (img) {
-                modalImg.src = img.getAttribute('data-full') || img.src;
+                modalImg.src = img.dataset.full || img.src;
                 modalImg.alt = img.alt || '';
                 modalCaption.textContent = title;
             }
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
             showIndex(index);
             modal.showModal();
             document.body.classList.add('modal-open');
-            closeBtn && closeBtn.focus();
+            closeBtn?.focus();
         }
 
         function closeModal() {
@@ -85,10 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
             card.addEventListener('click', () => openModal(index));
         });
 
-        closeBtn && closeBtn.addEventListener('click', closeModal);
-        prevBtn && prevBtn.addEventListener('click', () => showIndex(currentIndex - 1));
-        nextBtn && nextBtn.addEventListener('click', () => showIndex(currentIndex + 1));
-        backdrop && backdrop.addEventListener('click', (e) => {
+        closeBtn?.addEventListener('click', closeModal);
+        prevBtn?.addEventListener('click', () => showIndex(currentIndex - 1));
+        nextBtn?.addEventListener('click', () => showIndex(currentIndex + 1));
+        backdrop?.addEventListener('click', (e) => {
             if (e.target === backdrop || e.target.dataset.close === 'true') closeModal();
         });
         modal.addEventListener('keydown', (e) => {
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Portfolio filter bar: boost contrast once it sticks while scrolling
     const filterBar = document.querySelector('.portfolio-filter');
     if (filterBar) {
-        const stickyTop = parseInt(getComputedStyle(filterBar).top, 10) || 0;
+        const stickyTop = Number.parseInt(getComputedStyle(filterBar).top, 10) || 0;
         const updateStuck = () => {
             const stuck = filterBar.getBoundingClientRect().top <= stickyTop + 1;
             filterBar.classList.toggle('is-stuck', stuck);

@@ -21,9 +21,9 @@
     <link as="image" href="images/logo.svg" rel="preload" type="image/svg+xml">
 
     <!-- Styles -->
-    <link href="layout.css?v=20260904" rel="stylesheet">
-    <link href="theme.css?v=20260904" rel="stylesheet">
-    <script src="scripts.js?v=20260904" defer></script>
+    <link href="layout.css?v=20260905" rel="stylesheet">
+    <link href="theme.css?v=20260905" rel="stylesheet">
+    <script src="scripts.js?v=20260905" defer></script>
 
     <!-- Social Sharing -->
     <meta content="Contact Us — Macabre and Mirthworks" property="og:title">
@@ -97,7 +97,8 @@
                 </div>
 
                 <!-- Honeypot for basic bot deterrence -->
-                <input aria-hidden="true" autocomplete="off" class="hp-field" name="_gotcha" tabindex="-1" type="text">
+                <label class="hp-field" for="gotcha">Leave this field empty</label>
+                <input aria-hidden="true" autocomplete="off" class="hp-field" id="gotcha" name="_gotcha" tabindex="-1" type="text">
 
                 <!-- Success redirect -->
                 <input name="_subject" type="hidden" value="New message from macabreandmirthworks.com">
